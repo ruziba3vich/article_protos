@@ -81,6 +81,7 @@ message RewriteArticleRequest {
     string original_article_id = 2;
     string title = 3;
     string content = 4;
+    repeated File files = 5;
 }
 
 message RewriteArticleResponse {
