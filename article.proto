@@ -40,6 +40,7 @@ message ArticleEntity {
     string user_profile_pic = 8;
     string user_full_name = 9;
     bool liked = 10;
+    repeated FileEntity files = 11;
 }
 
 message PaginationRequest {
