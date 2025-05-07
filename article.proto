@@ -24,6 +24,24 @@ message Article {
     bool liked = 10;
 }
 
+message FileEntity {
+    string file_name = 1;
+    string url = 2;
+}
+
+message ArticleEntity {
+    string id = 1;
+    string user_id = 2;
+    string original_article_id = 3;
+    string title = 4;
+    string content = 5;
+    google.protobuf.Timestamp created_at = 6;
+    int32 like_count = 7;
+    string user_profile_pic = 8;
+    string user_full_name = 9;
+    bool liked = 10;
+}
+
 message PaginationRequest {
     int32 page = 1;
     int32 page_size = 2;
