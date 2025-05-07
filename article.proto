@@ -145,8 +145,8 @@ service ArticleService {
     rpc UpdateArticle(UpdateArticleRequest) returns (ArticleEntity);
     rpc RewriteArticle(RewriteArticleRequest) returns (ArticleEntity);
     rpc DeleteArticle(DeleteArticleRequest) returns (DeleteArticleResponse);
-    rpc LikeArticle(LikeArticleRequest) returns (ArticleEntity);
-    rpc UnlikeArticle(UnlikeArticleRequest) returns (ArticleEntity);
+    rpc LikeArticle(LikeArticleRequest) returns (LikeArticleResponse);
+    rpc UnlikeArticle(UnlikeArticleRequest) returns (UnlikeArticleResponse);
     rpc GetArticlesByUser(GetArticlesByUserRequest) returns (GetArticlesByUserResponse);
     rpc GetArticles(GetArticlesRequest) returns (GetArticlesResponse);
     rpc GetArticleByID(GetArticleByIDRequest) returns (GetArticleByIDResponse);
