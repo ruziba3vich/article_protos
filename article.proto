@@ -48,7 +48,7 @@ message PaginationRequest {
 }
 
 message PaginationResponse {
-    repeated Article articles = 1;
+    repeated ArticleEntity articles = 1;
     int32 total_count = 2;
     int32 page = 3;
     int32 page_size = 4;
@@ -137,16 +137,16 @@ message GetArticleByIDRequest {
 }
   
 message GetArticleByIDResponse {
-    Article article = 1;
+    ArticleEntity article = 1;
 }
 
 service ArticleService {
-    rpc CreateArticle(CreateArticleRequest) returns (CreateArticleResponse);
-    rpc UpdateArticle(UpdateArticleRequest) returns (UpdateArticleResponse);
-    rpc RewriteArticle(RewriteArticleRequest) returns (RewriteArticleResponse);
+    rpc CreateArticle(CreateArticleRequest) returns (ArticleEntity);
+    rpc UpdateArticle(UpdateArticleRequest) returns (ArticleEntity);
+    rpc RewriteArticle(RewriteArticleRequest) returns (ArticleEntity);
     rpc DeleteArticle(DeleteArticleRequest) returns (DeleteArticleResponse);
-    rpc LikeArticle(LikeArticleRequest) returns (LikeArticleResponse);
-    rpc UnlikeArticle(UnlikeArticleRequest) returns (UnlikeArticleResponse);
+    rpc LikeArticle(LikeArticleRequest) returns (ArticleEntity);
+    rpc UnlikeArticle(UnlikeArticleRequest) returns (ArticleEntity);
     rpc GetArticlesByUser(GetArticlesByUserRequest) returns (GetArticlesByUserResponse);
     rpc GetArticles(GetArticlesRequest) returns (GetArticlesResponse);
     rpc GetArticleByID(GetArticleByIDRequest) returns (GetArticleByIDResponse);
