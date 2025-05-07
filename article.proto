@@ -66,10 +66,9 @@ message CreateArticleResponse {
 
 message UpdateArticleRequest {
     string user_id = 1;
-    string device_id = 2;
-    string article_id = 3;
-    string title = 4;
-    string content = 5;
+    string article_id = 2;
+    string title = 3;
+    string content = 4;
 }
 
 message UpdateArticleResponse {
